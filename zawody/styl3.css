@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+}
+#naglowek{
+    background-color: green;
+    height: 200px;
+}
+#naglowek1{
+    display: inline-block;
+}
+#naglowek2{
+    display: inline-block;
+}
+#glowny{
+    background-color: mintcream;
+    height: 57vh;
+}
+#stopka1{
+    display: inline-block;
+    width: 30vw;
+}
+#stopka2{
+    display: inline-block;
+    width: 30vw;
+}
+#stopka{
+    background-color: green;
+    height: 10vh;
+}

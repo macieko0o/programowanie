@@ -1,0 +1,61 @@
+h1 {
+    font-size: 50px;
+   
+}
+.h {
+    background-color: #474647;
+    
+   
+    
+}
+p.headline {
+    
+   margin-left: auto;
+   margin-top: auto;
+   margin-right: auto;
+   margin-bottom: auto;
+   width: 100vw;
+   text-align: center;
+    color: #1978B3;
+   
+    font-size: 100px;
+}
+#your_name {
+    border: none;
+    border-bottom:  2px solid gray;
+    width: 80vw;
+    background-color: #EBEBEB;
+    
+}
+body {
+    margin: 0%;
+    background-color: #EBEBEB;
+    overflow-x: hidden;
+    font-family: 'Pixelify Sans', cursive;
+    
+}
+#button{
+        background-color:#DAC4F7  ;
+        border: none;
+        border-radius: 20px;
+        color: black;
+        padding: 6px 12px;
+        text-decoration: none;
+        margin: none;
+        cursor: pointer;
+}
+.container{
+    margin-left: 2vw;
+   margin-top: auto;
+   margin-right: auto;
+   margin-bottom: auto;
+   
+   width: 100%;
+   
+   
+   
+}
+.container2{
+    margin-left: 5vw;
+    
+}

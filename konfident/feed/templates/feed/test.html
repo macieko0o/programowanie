@@ -1,0 +1,95 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&family=Tiro+Telugu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="h" >
+        <p class="headline">Donosy</p>
+    </div>
+    <form class="container" method="post">{% csrf_token %}
+        <label for="your_name" style="font-size: 50px;" >Donos: </label>
+        <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+        <input type="submit" value="OK" id="button">
+    </form>
+    <div class="container"> autoreload<input id="reload" type="checkbox" style="
+        height: 13px;
+        width: 13px;
+        background-color: #DAC4F7;"></div>
+    <div class="container2">
+        {% for i in xd %}
+            <h1>{{i.text}}</h1>
+            <h3 style="background-color: #DAC4F7; display: inline-block;">{{i.date}}</h3>
+        {% endfor %}
+        
+        <script>
+        document.getElementById("your_name").oninput = (e)=>{
+            if (document.getElementById("your_name").value.length>=2000) {
+                document.getElementById("button").disabled = true
+            }
+            else {
+                document.getElementById("button").disabled = false
+            }
+        }
+        
+        document.getElementById("reload").checked = Boolean(getCookie("reload"))
+        function reload() {location.reload()}
+        document.getElementById("reload").onchange = ()=>{
+            if (document.getElementById("reload").checked==true) {
+                setCookie("reload", true, 10)
+            }
+            else {
+                setCookie("reload", false, 10)
+            }
+        }
+        setInterval(()=>{
+            if(getCookie("reload")=="true") {
+                reload()
+            }
+        }, 1000)
+        function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires="+d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        }
+
+        function getCookie(cname) {
+        let name = cname + "=";
+        let ca = document.cookie.split(';');
+        for(let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+        }
+
+        function checkCookie() {
+        let user = getCookie("username");
+        if (user != "") {
+            alert("Welcome again " + user);
+        } else {
+            user = prompt("Please enter your name:", "");
+            if (user != "" && user != null) {
+            setCookie("username", user, 365);
+            }
+        }
+        }
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+#navbar {
+    min-width: 100vw;
+    text-align: center;
+    font-family: 'Tiro Telugu', serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    background-color: #868B8E;
+    position: fixed;
+    top: 0;
+}
+#kolumna1{
+    display: inline-block;
+    margin-left: 10vw;
+    margin-top: 15vh;
+    width: 40vw;
+    height: 80vh;
+    background-color: #B9B7BD;
+}
+#kolumna2{
+    display: inline-block;
+    margin-left: 60vw;
+    margin-top: 15vh;
+    width: 40vw;
+    height: 80vh;
+    background-color: #B9B7BD;
+}
+.container{
+    min-height: 200vh;
+    
+
+}
+#footer{
+    min-height: 10vh;
+    min-width: 100vw;
+    background-color: #B9B7BD;
+}
+
+body{
+    overflow-x: hidden;
+    margin:0px;
+    background-color: #EEEDE7;
+}

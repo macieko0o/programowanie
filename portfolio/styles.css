@@ -1,0 +1,47 @@
+body{
+    font-style: Garamond;
+    margin: 0px;
+}
+#prawy{
+    background-color: lightsalmon;
+    list-style: decimal;
+    height: 300px;
+    width: 30%;
+    float: left;
+}
+#lewy{
+    background-color: lightsalmon;
+    height: 300px;
+    width: 30%;
+    float: left;
+}
+#srodkowy{
+ background-color: lightsalmon;
+ height: 300px;
+ width: 40%;
+ float: left;
+}
+#baner{
+    background-color: rosybrown;
+    text-align: center;
+    padding: 10px;
+    color: white;
+}
+#formularz{
+    background-color: darksalmon;
+    text-align: center;
+    padding: 40px;
+    list-style: decimal;
+}
+#stopka{
+    background-color: rosybrown;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+#lista{
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(205, 92,92);
+    font-size: 150%;
+}
